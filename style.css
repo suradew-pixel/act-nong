@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;700&display=swap');
+
+body { font-family: 'Noto Sans Thai', sans-serif; background-color: #f9f9f9; padding-top: 70px; } /* padding-top กันเมนูบัง */
+.navbar { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+.nav-link { color: #333; font-weight: 500; }
+.nav-link:hover { color: #e74c3c; }
+
+/* Hero Section เฉพาะหน้าแรก */
+/* ส่วนหัวเว็บไซต์ (Header) */
+.hero {
+    /* 1. ใส่สีดำจางๆ (0.5) ทับรูปภาพ เพื่อให้ตัวหนังสือสีขาวเด่นขึ้น อ่านง่าย */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('images/bg-main.jpg'); 
+
+    /* 2. ตั้งค่าการแสดงผลรูปภาพ */
+    background-position: center;    /* จัดรูปให้อยู่ตรงกลางเสมอ */
+    background-size: cover;         /* ขยายรูปให้เต็มพื้นที่โดยอัตโนมัติ */
+    background-repeat: no-repeat;   /* ไม่ให้รูปซ้ำ */
+    
+    /* 3. การจัดวางอื่นๆ */
+    color: white;                   /* บังคับตัวหนังสือในนี้ให้เป็นสีขาว */
+    padding-top: 150px;             /* ดันข้อความลงมา */
+    padding-bottom: 150px;          /* เว้นระยะด้านล่าง */
+    position: relative;
+}
+.page-header { background: #e74c3c; color: white; padding: 40px 0; margin-bottom: 30px; text-align: center; }
+.card-custom { border: none; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); overflow: hidden; background: white; transition: 0.3s; }
+.card-custom:hover { transform: translateY(-5px); }
+.img-cover { width: 100%; height: 200px; object-fit: cover; }
+/* เพิ่มต่อท้ายในไฟล์ style.css เดิม */
+
+.text-indent {
+    text-indent: 2em; /* ย่อหน้าข้อความ */
+}
+
+/* เอฟเฟกต์การ์ดข่าว */
+.hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* เอฟเฟกต์รูปในข่าวซูมนิดๆ */
+.object-fit-cover {
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.hover-card:hover .object-fit-cover {
+    transform: scale(1.05);
+}
+
+/* เอฟเฟกต์กล่องเมนูลัด */
+.hover-shadow {
+    transition: all 0.3s ease;
+}
+.hover-shadow:hover {
+    background-color: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-color: transparent !important;
+    transform: translateY(-3px);
+}
